@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujammil's Contact Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           background-image: url(img/My-image/coder-img.jpg);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .contact-card {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background-image: url(img/My-image/my-photo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .card-header h2 a {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .card-header p {
+            opacity: 0.9;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .detail-item:hover {
+            background: #f5f9ff;
+            transform: translateX(5px);
+        }
+
+        .detail-item:active {
+            transform: scale(0.98);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: #eaf2ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: #2575fc;
+            font-size: 1.2rem;
+        }
+
+        .detail-content {
+            flex: 1;
+        }
+
+        .detail-content h3 {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .detail-content p {
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .whatsapp-link {
+            color: #25D366;
+            text-decoration: none;
+        }
+
+        .gmail-link {
+            color: #D44638;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-link:hover, .gmail-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: black;
+            font-size: 15px;
+            border-top: 1px solid #eee;
+            font-weight: 400;
+        }
+        
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: white;
+            color: #2575fc;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #2575fc;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            .contact-card {
+                max-width: 100%;
+            }
+
+            .card-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .detail-item {
+                padding: 12px;
+            }
+
+            .icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+
+            .detail-content p {
+                font-size: 1rem;
+            }
+
+            .back-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body >
+    <a href="index.html"></a>
+    <div class="contact-card">
+        <div class="card-header">
+            <h2><a href="index.html">Mujammil Shaikh</a></h2>
+            <p>Contact Details</p>
+        </div>
+
+        <div class="card-content">
+            <div class="detail-item">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>NAME</h3>
+                    <p>Mujammil Shaikh</p>
+                </div>
+            </div>
+
+            <div class="detail-item" onclick="openWhatsApp()">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>PHONE NUMBER</h3>
+                    <p class="whatsapp-link">8828214924</p>
+                </div>
+            </div>
+
+            <div class="detail-item" onclick="openGmail()">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="detail-content">
+                    <h3>EMAIL ADDRESS</h3>
+                    <p class="gmail-link">mujammil8828@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Click on phone number to open WhatsApp | Click on email to compose email</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-button">
+        <i class="fas fa-home"></i> Back to Home
+    </a>
+
+    <script>
+        function openWhatsApp() {
+            // Format the phone number for WhatsApp (remove any spaces or special characters)
+            const phoneNumber = "8828214924";
+            
+            // Create the WhatsApp link
+            const whatsappUrl = `https://wa.me/${phoneNumber}`;
+            
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        function openGmail() {
+            // Email address
+            const email = "mujammil8828@gmail.com";
+            
+            // Create the mailto link with subject and body for a complete email experience
+            const subject = "Inquiry from Website";
+            const body = "Hello Mujammil, I would like to get in touch with you regarding...";
+            
+            // This will open the user's default email client with a pre-filled email
+            const gmailUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open the email client
+            window.location.href = gmailUrl;
+        }
+        
+    </script>
+</body>
+
+</html>
